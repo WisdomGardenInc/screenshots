@@ -23,7 +23,7 @@
 
 ## react-screenshots
 
-[react-screenshots](./packages/react-screenshots/README.md)是`screenshots`的另一个子项目，提供了与`react`相关的截图界面插件，可以与`electron-screenshots`渲染进程界面配合使用，当然也可以单独使用。
+[react-screenshots](packages/react-screenshots-suport-touch/README.md)是`screenshots`的另一个子项目，提供了与`react`相关的截图界面插件，可以与`electron-screenshots`渲染进程界面配合使用，当然也可以单独使用。
 
 ### 安装
 

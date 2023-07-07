@@ -12,7 +12,7 @@
 
 ```ts
 import React, { ReactElement, useCallback } from "react";
-import Screenshots, { Bounds } from "react-screenshots";
+import Screenshots, { Bounds } from "react-screenshots-suport-touch";
 import url from "./image.jpg";
 
 interface Bounds {

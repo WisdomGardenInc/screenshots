@@ -31,4 +31,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4.2.2
         with:
           branch: gh-pages # The branch the action should deploy to.
-          folder: packages/react-screenshots/dist # The folder the action should deploy.
+          folder: packages/react-screenshots-suport-touch/dist # The folder the action should deploy.
