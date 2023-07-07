@@ -60,17 +60,17 @@ export default memo(function ScreenshotsBackground (): ReactElement | null {
   const onTouchStart = useCallback(
     (e: React.TouchEvent) => {
       if (pointRef.current || bounds || e.nativeEvent.touches.length !== 1) {
-        return;
+        return
       }
-      const touch = e.touches[0];
+      const touch = e.touches[0]
       pointRef.current = {
         x: touch.clientX,
-        y: touch.clientY,
-      };
-      isMoveRef.current = false;
+        y: touch.clientY
+      }
+      isMoveRef.current = false
     },
     [bounds]
-  );
+  )
 
   useEffect(() => {
     const onMouseMove = (e: MouseEvent) => {

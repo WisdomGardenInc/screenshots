@@ -1,6 +1,6 @@
 {
   "name": "electron-screenshots-suport-touch",
-  "version": "0.5.23",
+  "version": "0.5.24",
   "description": "electron 截图插件",
   "types": "lib/screenshots.d.ts",
   "main": "lib/screenshots.js",
@@ -28,7 +28,7 @@
   "author": "nashaofu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nashaofu/screenshots/issues"
+    "url": "https://gitee.com/natsudeng/screenshots-support-touch/issues"
   },
   "homepage": "https://github.com/nashaofu/screenshots/tree/master/packages/electron-screenshots#readme",
   "publishConfig": {
@@ -38,7 +38,7 @@
     "debug": "^4.3.4",
     "fs-extra": "^11.1.1",
     "node-screenshots": "^0.1.4",
-    "react-screenshots-suport-touch": "^0.5.22"
+    "react-screenshots-suport-touch": "^0.5.23"
   },
   "peerDependencies": {
     "electron": ">=14"
@@ -57,5 +57,8 @@
     "eslint-plugin-import": "^2.27.5",
     "rimraf": "^4.4.1",
     "typescript": "^5.0.2"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }

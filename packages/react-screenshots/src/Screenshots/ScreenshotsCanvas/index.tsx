@@ -84,40 +84,16 @@ export default memo(
       })
     }, [bounds, ctxRef, history])
 
-    const onMouseDown = useCallback(
-      (e: React.MouseEvent | React.TouchEvent, resizeOrMove: string) => {
-        if (
-          (e.nativeEvent instanceof MouseEvent &&
-            e.nativeEvent.button !== 0) ||
-          (e.nativeEvent instanceof TouchEvent &&
-            e.nativeEvent.touches.length !== 1) ||
-          !bounds
-        ) {
-          return;
-        }
-
-        if (e.nativeEvent instanceof TouchEvent) {
-          const touch = e.touches[0]
-          if (touch) {
-            handleEvent(touch.clientX, touch.clientY, resizeOrMove)
-          }
-        } else {
-          handleEvent(e.clientX, e.clientY, resizeOrMove)
-        }
-      },
-      [bounds]
-    )
-
     const handleEvent = useCallback(
       (clientX: number, clientY: number, resizeOrMove: string) => {
         if (!bounds) {
           return
         }
         const mouseEvent = new MouseEvent('mousedown', {
-          clientX: clientX,
-          clientY: clientY,
+          clientX,
+          clientY,
           button: 0
-        });
+        })
         if (!operation) {
           resizeOrMoveRef.current = resizeOrMove
           pointRef.current = {
@@ -145,6 +121,30 @@ export default memo(
         }
       },
       [bounds, operation, emiter, history]
+    )
+
+    const onMouseDown = useCallback(
+      (e: React.MouseEvent | React.TouchEvent, resizeOrMove: string) => {
+        if (
+          (e.nativeEvent instanceof MouseEvent &&
+            e.nativeEvent.button !== 0) ||
+          (e.nativeEvent instanceof TouchEvent &&
+            e.nativeEvent.touches.length !== 1) ||
+          !bounds
+        ) {
+          return
+        }
+
+        if (e.nativeEvent instanceof TouchEvent) {
+          const touch = e.nativeEvent.touches[0]
+          if (touch) {
+            handleEvent(touch.clientX, touch.clientY, resizeOrMove)
+          }
+        } else {
+          handleEvent(e.nativeEvent.clientX, e.nativeEvent.clientY, resizeOrMove)
+        }
+      },
+      [bounds]
     )
 
     const updateBounds = useCallback(
