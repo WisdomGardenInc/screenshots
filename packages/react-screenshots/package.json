@@ -1,5 +1,5 @@
 {
-  "name": "react-screenshots",
+  "name": "react-screenshots-suport-touch",
   "version": "0.5.22",
   "description": "a screenshot cropper tool by react",
   "main": "./lib/react-screenshots.cjs.js",

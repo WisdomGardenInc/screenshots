@@ -1,5 +1,5 @@
 {
-  "name": "electron-screenshots",
+  "name": "electron-screenshots-suport-touch",
   "version": "0.5.23",
   "description": "electron 截图插件",
   "types": "lib/screenshots.d.ts",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nashaofu/screenshots.git"
+    "url": "git+https://gitee.com/natsudeng/screenshots-support-touch.git"
   },
   "keywords": [
     "electron",
