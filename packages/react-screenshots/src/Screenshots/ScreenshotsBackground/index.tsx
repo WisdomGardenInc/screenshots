@@ -57,6 +57,21 @@ export default memo(function ScreenshotsBackground (): ReactElement | null {
     [bounds]
   )
 
+  const onTouchStart = useCallback(
+    (e: React.TouchEvent) => {
+      if (pointRef.current || bounds || e.nativeEvent.touches.length !== 1) {
+        return;
+      }
+      const touch = e.touches[0];
+      pointRef.current = {
+        x: touch.clientX,
+        y: touch.clientY,
+      };
+      isMoveRef.current = false;
+    },
+    [bounds]
+  );
+
   useEffect(() => {
     const onMouseMove = (e: MouseEvent) => {
       if (elRef.current) {
@@ -117,7 +132,7 @@ export default memo(function ScreenshotsBackground (): ReactElement | null {
   }
 
   return (
-    <div ref={elRef} className='screenshots-background' onMouseDown={onMouseDown} onTouchStart={onMouseDown}>
+    <div ref={elRef} className='screenshots-background' onMouseDown={onMouseDown} onTouchStart={onTouchStart}>
       <img className='screenshots-background-image' src={url} />
       <div className='screenshots-background-mask' />
       {position && !bounds && <ScreenshotsMagnifier x={position?.x} y={position?.y} />}
