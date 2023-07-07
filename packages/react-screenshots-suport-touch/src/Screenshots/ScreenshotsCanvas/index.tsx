@@ -90,8 +90,8 @@ export default memo(
           return
         }
         const mouseEvent = new MouseEvent('mousedown', {
-          clientX,
-          clientY,
+          clientX:clientX,
+          clientY: clientY,
           button: 0
         })
         if (!operation) {
