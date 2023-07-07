@@ -117,7 +117,7 @@ export default memo(function ScreenshotsBackground (): ReactElement | null {
   }
 
   return (
-    <div ref={elRef} className='screenshots-background' onMouseDown={onMouseDown}>
+    <div ref={elRef} className='screenshots-background' onMouseDown={onMouseDown} onTouchStart={onMouseDown}>
       <img className='screenshots-background-image' src={url} />
       <div className='screenshots-background-mask' />
       {position && !bounds && <ScreenshotsMagnifier x={position?.x} y={position?.y} />}
