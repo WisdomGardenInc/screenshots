@@ -85,6 +85,8 @@ export default function Screenshots ({ url, width, height, lang, className, ...p
 
   const onDoubleClick = useCallback(
     async (e: MouseEvent) => {
+      console.log('okonDoubleClick')
+      console.log(e.button)
       if (e.button !== 0 || !image) {
         return
       }

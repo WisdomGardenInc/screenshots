@@ -1,6 +1,6 @@
 {
   "name": "react-screenshots-suport-touch",
-  "version": "0.5.27",
+  "version": "0.5.28",
   "description": "a screenshot cropper tool by react",
   "main": "./lib/react-screenshots.cjs.js",
   "module": "./lib/react-screenshots.es.js",
@@ -10,9 +10,9 @@
     "electron/**"
   ],
   "scripts": {
-    "start": "vite",
+    "start": "vite --host=0.0.0.0",
     "dev": "tsc --watch",
-    "build": "npm run lint && npm run clean && npm run build:electron && npm run build:lib",
+    "build": "npm run lint && npm run clean && npm run build:web && npm run build:electron && npm run build:lib",
     "build:web": "vite build --mode web",
     "build:electron": "vite build --mode electron",
     "build:lib": "vite build --mode lib && tsc --project tsconfig.build.json",
