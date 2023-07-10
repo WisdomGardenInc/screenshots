@@ -90,8 +90,8 @@ export default memo(
           return
         }
         const mouseEvent = new MouseEvent('mousedown', {
-          clientX:clientX,
-          clientY: clientY,
+          clientX,
+          clientY,
           button: 0
         })
         if (!operation) {
@@ -134,7 +134,6 @@ export default memo(
         ) {
           return
         }
-
         if (e.nativeEvent instanceof TouchEvent) {
           const touch = e.nativeEvent.touches[0]
           if (touch) {
@@ -144,7 +143,7 @@ export default memo(
           handleEvent(e.nativeEvent.clientX, e.nativeEvent.clientY, resizeOrMove)
         }
       },
-      [bounds]
+      [bounds, operation, emiter, history]
     )
 
     const updateBounds = useCallback(
