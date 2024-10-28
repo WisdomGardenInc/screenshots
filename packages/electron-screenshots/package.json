@@ -1,6 +1,6 @@
 {
   "name": "electron-screenshots-suport-touch",
-  "version": "0.5.33",
+  "version": "0.5.34",
   "description": "electron 截图插件suport-touch",
   "types": "lib/index.d.ts",
   "main": "lib/index.cjs.js",
@@ -39,7 +39,7 @@
     "debug": "^4.3.4",
     "fs-extra": "^11.1.1",
     "node-screenshots": "^0.2.1",
-    "react-screenshots-suport-touch": "^0.5.31"
+    "react-screenshots-suport-touch": "^0.5.34"
   },
   "peerDependencies": {
     "electron": ">=14"
