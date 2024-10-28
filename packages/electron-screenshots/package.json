@@ -1,6 +1,6 @@
 {
   "name": "electron-screenshots-suport-touch",
-  "version": "0.5.34",
+  "version": "0.5.35",
   "description": "electron 截图插件suport-touch",
   "types": "lib/index.d.ts",
   "main": "lib/index.cjs.js",
